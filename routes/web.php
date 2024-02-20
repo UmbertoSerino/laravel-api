@@ -50,3 +50,6 @@ Route::middleware('auth')
         // Route Resource Technology
         Route::resource('/technologies', AdminTechnologyController::class);
     });
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
